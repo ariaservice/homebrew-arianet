@@ -5,13 +5,13 @@
 class Arianet < Formula
   desc "Command-line client for the Ariaservice cloud API"
   homepage "https://github.com/ariaservice/arianet-cli"
-  version "0.6.0"
+  version "0.6.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.0/arianet_0.6.0_darwin_amd64.tar.gz"
-      sha256 "52b63d0c0d385a4faffd43aa0610741c752fcf040bca4af75069b142a7674929"
+      url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.1/arianet_0.6.1_darwin_amd64.tar.gz"
+      sha256 "445c201fe86aa40b357414ec7be7ba09275123d699e1088e29ecf73251d40831"
 
       define_method(:install) do
         bin.install "arianet"
@@ -21,8 +21,8 @@ class Arianet < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.0/arianet_0.6.0_darwin_arm64.tar.gz"
-      sha256 "b59169bd05d5a2576230cbd07cac02ecb3ab4066d14fa54b7524309b0ef541fd"
+      url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.1/arianet_0.6.1_darwin_arm64.tar.gz"
+      sha256 "c6bac9d621fc128403b73a17be977a86fd97b9cfde44d0addfdf5d90c5c3118f"
 
       define_method(:install) do
         bin.install "arianet"
@@ -35,8 +35,8 @@ class Arianet < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.0/arianet_0.6.0_linux_amd64.tar.gz"
-      sha256 "a03f90cf2d87fd0b7c678c4bcd2fa77ebf5dfa21e122bf761ccd6d203b29016f"
+      url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.1/arianet_0.6.1_linux_amd64.tar.gz"
+      sha256 "e17d0b72f46aa6f1dc25dc98949a2386598a10296360b2097d47a4c7ecd86afa"
       define_method(:install) do
         bin.install "arianet"
         bash_completion.install "completions/arianet.bash" => "arianet"
@@ -45,8 +45,8 @@ class Arianet < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.0/arianet_0.6.0_linux_arm64.tar.gz"
-      sha256 "1272349e5d9f7338cf7732939c45d06f52f2375e415b8c9023a9d28836e9220a"
+      url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.1/arianet_0.6.1_linux_arm64.tar.gz"
+      sha256 "cf2c885959d678790c14f7ea389394d305627fc1a703126cd90a7bf34075208f"
       define_method(:install) do
         bin.install "arianet"
         bash_completion.install "completions/arianet.bash" => "arianet"
