@@ -11,7 +11,7 @@ class Arianet < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.1/arianet_0.6.1_darwin_amd64.tar.gz"
-      sha256 "445c201fe86aa40b357414ec7be7ba09275123d699e1088e29ecf73251d40831"
+      sha256 "1d33a7b1fa2b1245d5742bcc0f45fc86c544151eda0f5efd03e59631640583f8"
 
       define_method(:install) do
         bin.install "arianet"
@@ -22,7 +22,7 @@ class Arianet < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.1/arianet_0.6.1_darwin_arm64.tar.gz"
-      sha256 "c6bac9d621fc128403b73a17be977a86fd97b9cfde44d0addfdf5d90c5c3118f"
+      sha256 "f251266360a6505fe0e2855dcb616c40481ca90365dc4d6eb9c0aced07a52142"
 
       define_method(:install) do
         bin.install "arianet"
@@ -36,7 +36,7 @@ class Arianet < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.1/arianet_0.6.1_linux_amd64.tar.gz"
-      sha256 "e17d0b72f46aa6f1dc25dc98949a2386598a10296360b2097d47a4c7ecd86afa"
+      sha256 "c839cc06f370f83455c05b78825246686c7349dbf3afe2246221d9a25fc6a9ea"
       define_method(:install) do
         bin.install "arianet"
         bash_completion.install "completions/arianet.bash" => "arianet"
@@ -46,7 +46,7 @@ class Arianet < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ariaservice/arianet-cli/releases/download/v0.6.1/arianet_0.6.1_linux_arm64.tar.gz"
-      sha256 "cf2c885959d678790c14f7ea389394d305627fc1a703126cd90a7bf34075208f"
+      sha256 "4026a880a3b7d508e38bc8a89cae13787dd82222f7448d81b7cc74a4af83083f"
       define_method(:install) do
         bin.install "arianet"
         bash_completion.install "completions/arianet.bash" => "arianet"
